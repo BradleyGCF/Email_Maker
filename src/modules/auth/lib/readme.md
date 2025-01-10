@@ -1,0 +1,1 @@
+Carpeta para constantes que se utilizen el entorno, entre otras cosas que no van en utils.

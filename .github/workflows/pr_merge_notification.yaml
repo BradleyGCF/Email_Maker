@@ -1,0 +1,31 @@
+# .github/workflows/pr_merge_notification.yaml
+name: PR Merge Notification
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  notifications:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.pull_request.merged == true }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.merge_commit_sha }}
+
+      - name: Make auto_notify.sh Executable
+        run: chmod +x ./.automation/auto_notify.sh
+
+      - name: Set Variables
+        id: vars
+        run: |
+          echo "GIT_BRANCH=${{ github.event.pull_request.head.ref }}" >> $GITHUB_ENV
+          echo "PR_NUMBER=${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+          echo "REPO_OWNER=${{ github.repository_owner }}" >> $GITHUB_ENV
+          echo "REPO_NAME=$(basename -s .git $(git config --get remote.origin.url))" >> $GITHUB_ENV
+          echo "PR_MERGE_COMMIT=${{ github.event.pull_request.merge_commit_sha }}" >> $GITHUB_ENV
+
+      - name: Send Notifications
+        run: ./.automation/auto_notify.sh

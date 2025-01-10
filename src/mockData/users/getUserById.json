@@ -1,0 +1,36 @@
+{
+	"status": "success",
+	"result": true,
+	"user": {
+		"id": "5dZrDguMg1",
+		"attributes": {
+			"username": "royaken905",
+			"pickupLocation": {
+				"latitude": 23.003908026630658,
+				"longitude": 34.49981689453126,
+				"locationName": "Avenida siempreviva"
+			},
+			"email": "royaken905@pahed.com",
+			"fullName": "Homero Simpson",
+			"status": "active",
+			"position": "Developer",
+			"rangeDate": "",
+			"phone": "+54556445554",
+			"emailVerified": false,
+			"createdAt": "2024-05-03T18:15:55.608Z",
+			"updatedAt": "2024-05-03T20:28:22.193Z",
+			"routeId": "Mkv8Mu7yh3",
+			"user_type": "user",
+			"ACL": {
+				"*": {
+					"read": true
+				},
+				"5dZrDguMg1": {
+					"read": true,
+					"write": true
+				}
+			},
+			"sessionToken": "r:e8c4fed4ad545aca3baa72624643e529"
+		}
+	}
+}
