@@ -1,5 +1,8 @@
-import Search from '@/modules/core/components/search'
-import UserList from '@/modules/users/components/userList'
+import Advantages from '@/modules/core/components/landing/advantages'
+import Features from '@/modules/core/components/landing/features'
+import Header from '@/modules/core/components/landing/header'
+import Plans from '@/modules/core/components/landing/plans'
+import Recipients from '@/modules/core/components/landing/recipients'
 import { getAllUsers } from '@/modules/users/services'
 
 export function loader() {
@@ -9,10 +12,12 @@ export function loader() {
 
 export default function Home() {
   return (
-    <div>
-      <h2>Usuarios</h2>
-      <Search />
-      <UserList />
+    <div className="space-y-[92px]">
+      <Header />
+      <Recipients />
+      <Features />
+      <Advantages />
+      <Plans />
     </div>
   )
 }
