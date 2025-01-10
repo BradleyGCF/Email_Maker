@@ -12,10 +12,17 @@ module.exports = {
       },
     },
     extend: {
+      boxShadow: {
+        landing: '0 0 15px 2px rgba(92, 139, 192, 0.2)',
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
+        lightBlue: '#5C8CC0',
+        darkBlue: '#2E4660',
+        extraLightBlue: '#F1F8FF',
+        yellow: '#F7B80E',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         primary: {
@@ -65,6 +72,9 @@ module.exports = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
       },
     },
   },
