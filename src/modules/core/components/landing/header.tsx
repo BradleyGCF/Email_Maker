@@ -3,7 +3,7 @@ import { StartButton } from '../../ui/button/startButton'
 
 const header = () => {
   return (
-    <header className="flex mt-[92px] mx-20">
+    <header className="flex mx-20">
       <div>
         <h2 className="font-inter text-[64px] font-bold leading-[1.1]">
           <span className="text-lightBlue">Diseña correos</span> que marquen la <span className="text-lightBlue">diferencia</span>
