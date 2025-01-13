@@ -13,7 +13,8 @@ module.exports = {
     },
     extend: {
       boxShadow: {
-        landing: '0 0 15px 2px rgba(92, 139, 192, 0.2)',
+        landing: '0px 4px 18.7px 8px rgba(183, 221, 255, 0.25)',
+        landingIntense: '0px 4px 18.5px 8px rgba(183, 221, 255, 0.86)',
       },
       colors: {
         border: 'hsl(var(--border))',
@@ -22,6 +23,7 @@ module.exports = {
         lightBlue: '#5C8CC0',
         darkBlue: '#2E4660',
         extraLightBlue: '#F1F8FF',
+        gray: '#666',
         yellow: '#F7B80E',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
