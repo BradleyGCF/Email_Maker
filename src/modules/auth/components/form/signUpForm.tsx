@@ -52,7 +52,7 @@ function SignUpForm() {
 
   const { isButtonDisabled, handleMarketingChange, handlePrivacyPolicyChange } = usePolicies()
   return (
-    <main className="">
+    <main>
       <div className="mb-4 flex gap-1 justify-center items-center">
         <span className="text-lg font-semibold text-center">Regístrate y comienza</span>
       </div>

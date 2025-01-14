@@ -14,9 +14,9 @@ export default function AuthLayout() {
   // useAuth()
 
   return (
-    <div className="h-screen">
+    <div className="min-h-screen mt-20 mb-10">
       <div className="grid h-full grid-cols-1 px-4">
-        <div className="w-full max-w-md m-auto flex flex-col justify-center items-center gap-[74px]">
+        <div className="w-full max-w-md m-auto flex flex-col justify-center items-center gap-10">
           {/* <div className="w-full mb-4">
             <Link className={cn(ButtonVariants(), 'block w-fit')} to={Routes.home}>
               <Arrow direction="left" />
