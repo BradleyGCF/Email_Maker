@@ -11,6 +11,7 @@ import { FaRegEye } from 'react-icons/fa'
 import { FaRegEyeSlash } from 'react-icons/fa'
 import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'sonner'
+import { usePolicies } from '../../hooks/usePolicies'
 import checkStrength from '../../utils/passwordStrength'
 
 function SignUpForm() {
@@ -48,6 +49,8 @@ function SignUpForm() {
     setPasswordStrength(result)
     formik.setFieldValue('password', e.target.value)
   }
+
+  const { isButtonDisabled, handleMarketingChange, handlePrivacyPolicyChange } = usePolicies()
   return (
     <main className="">
       <div className="mb-4 flex gap-1 justify-center items-center">
@@ -168,14 +171,17 @@ function SignUpForm() {
         {/* Input Confirm Password */}
 
         <div className="flex text-sm text-gray gap-4 items-start accent-lightBlue">
-          <input type="checkbox" />
+          <input type="checkbox" id="privacy-policy" onChange={handlePrivacyPolicyChange} />
           <p>He leído y acepto totalmente la política de privacidad y las condiciones generales.</p>
         </div>
         <div className="flex text-sm text-gray gap-4 items-start accent-lightBlue">
-          <input type="checkbox" />
+          <input type="checkbox" id="marketing" onChange={handleMarketingChange} />
           <p>Acepto de modo inequívoco recibir boletines, newsletter o comunicaciones comerciales de esta entidad.</p>
         </div>
-        <Button className="w-full" text="Registrarme" />
+        <Button
+          className={cn('w-full', isButtonDisabled ? 'bg-[#ccc] cursor-not-allowed' : 'cursor-pointer')}
+          text="Registrarme"
+        />
         <div className="flex gap-1 justify-center text-gray">
           <p>¿Ya tienes una cuenta?</p>
           <Link className="text-lightBlue" to={Routes.logIn}>
