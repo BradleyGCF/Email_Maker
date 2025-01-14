@@ -3,13 +3,13 @@ import { Services } from '@/services'
 import axios from 'axios'
 import type { LogIn, SignUp } from '../types'
 
-export const signUp = async ({ email, password, fullName, username }: SignUp) => {
+export const signUp = async ({ username, email, phone, password }: SignUp) => {
   try {
     const response = await axios.post(Services.auth.signUp, {
-      email,
-      password,
       username,
-      fullName,
+      email,
+      phone,
+      password,
     })
 
     if (response.data.status === $ResponseStatus.ERROR) {

@@ -5,9 +5,9 @@ import type { SignUp } from '../types'
 function useSignUp() {
   const [loading, setLoading] = useState(false)
 
-  const signUp = async ({ email, password, fullName, username }: SignUp) => {
+  const signUp = async ({ email, phone, password, username }: SignUp) => {
     try {
-      const result = await signUpService({ email, password, fullName, username })
+      const result = await signUpService({ email, phone, password, username })
 
       return result
     } catch (error) {

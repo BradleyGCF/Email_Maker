@@ -3,4 +3,8 @@ import type { InferType } from 'yup'
 
 export type LogIn = Pick<InferType<typeof LogInSchema>, 'email' | 'password'>
 
-export type SignUp = Pick<InferType<typeof SignUpSchema>, 'email' | 'password' | 'fullName' | 'username'>
+export type SignUp = Omit<InferType<typeof SignUpSchema>, 'confirmPassword' | 'countryCode' | 'phoneNumber'> & {
+  confirmPassword?: string
+  countryCode?: number
+  phoneNumber?: number
+}
