@@ -8,7 +8,7 @@ const BasicButton = ({
   type,
 }: { text: string; className?: string; outline?: boolean; type?: 'submit' | 'reset' }) => (
   <Button
-    className={cn('bg-lightBlue p-2.5 h-12 rounded-xl', className, outline && 'bg-white border border-lightBlue text-lightBlue')}
+    className={cn('bg-lightBlue p-2.5 h-12 rounded-xl', outline && 'bg-white border border-lightBlue text-lightBlue', className)}
     loading={false}
     type={type || 'button'}
   >
