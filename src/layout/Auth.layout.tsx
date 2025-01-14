@@ -26,7 +26,7 @@ export default function AuthLayout() {
             <img src={icon} alt="logo" />
             <img src={logotype} alt="logo" />
           </div>
-          <div className="w-full p-5 rounded-3xl shadow-lg bg-white/80 backdrop-blur-sm">
+          <div className="w-full p-8 rounded-3xl shadow-auth backdrop-blur-sm">
             <Outlet />
           </div>
         </div>
