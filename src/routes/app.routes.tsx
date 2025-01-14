@@ -1,6 +1,5 @@
 // import { $UserRole } from '@/modules/auth/enum'
 // import { ProtectedRoute } from '@/modules/core/context/ProtectedRoute.provider'
-import Profile from '@/screens/user/profile'
 // import type { UserRole } from '@/types'
 import type { RouteObject } from 'react-router-dom'
 import { Routes } from './paths'
@@ -20,10 +19,22 @@ export const AppRoutes = [
   },
   {
     path: Routes.user.profile,
-    element: (
-      // <ProtectedRoute redirect={Routes.logIn as unknown as string} rolesAllowed={rolesAllowed}>
-      <Profile />
-      // </ProtectedRoute>
-    ),
+    lazy: () => import('@/screens/user/profile'),
+  },
+  {
+    path: Routes.editor,
+    lazy: () => import('@/screens/editor'),
+  },
+  {
+    path: Routes.templates,
+    lazy: () => import('@/screens/templates'),
+  },
+  {
+    path: Routes.emails,
+    lazy: () => import('@/screens/emails'),
+  },
+  {
+    path: Routes.IaChat,
+    lazy: () => import('@/screens/IaChat'),
   },
 ] as RouteObject[]

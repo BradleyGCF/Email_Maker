@@ -7,4 +7,8 @@ export const Routes = {
     profile: '/profile',
   },
   plans: '/plans',
+  editor: '/editor',
+  templates: '/templates',
+  emails: '/emails',
+  IaChat: '/IaChat',
 } as const
