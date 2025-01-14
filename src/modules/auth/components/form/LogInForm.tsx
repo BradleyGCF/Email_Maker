@@ -32,42 +32,42 @@ export default function LogInForm() {
   })
 
   return (
-    <main>
-      <div className="mb-4 flex gap-1 justify-center items-center">
-        <span className="text-xl font-semibold text-center">Inicio de sesión</span>
-      </div>
-      <form className="flex flex-col gap-4" onSubmit={formik.handleSubmit}>
-        {/* Input Email */}
-        <label className="flex flex-col gap-1">
-          <span className="text-xs text-gray">Correo electrónico</span>
-          <Input
-            onChange={formik.handleChange}
-            value={formik.values.email}
-            onBlur={formik.handleBlur}
-            name="email"
-            placeholder="ejemplo@gmail.com"
-            type="email"
-            required
-          />
-          {formik.touched.email && <span className="border-primary text-primary">{formik.errors.email}</span>}
-        </label>
-        {/* Input Email */}
+    <main className="flex flex-col gap-8">
+      <h3 className="text-xl font-semibold text-center">Inicio de sesión</h3>
+      <form className="flex flex-col gap-8" onSubmit={formik.handleSubmit}>
+        <div className="flex flex-col gap-2">
+          {/* Input Email */}
+          <label className="flex flex-col gap-1">
+            <span className="text-xs text-gray">Correo electrónico</span>
+            <Input
+              onChange={formik.handleChange}
+              value={formik.values.email}
+              onBlur={formik.handleBlur}
+              name="email"
+              placeholder="ejemplo@gmail.com"
+              type="email"
+              required
+            />
+            {formik.touched.email && <span className="border-primary text-primary">{formik.errors.email}</span>}
+          </label>
+          {/* Input Email */}
 
-        {/* Input Password */}
-        <label className="flex flex-col gap-1">
-          <span className="text-xs text-gray">Contraseña</span>
-          <Input
-            onChange={formik.handleChange}
-            value={formik.values.password}
-            onBlur={formik.handleBlur}
-            name="password"
-            placeholder="****************"
-            type="password"
-            required
-          />
-          {formik.touched.password && <span className="border-primary text-primary">{formik.errors.password}</span>}
-        </label>
-        {/* Input Password */}
+          {/* Input Password */}
+          <label className="flex flex-col gap-1">
+            <span className="text-xs text-gray">Contraseña</span>
+            <Input
+              onChange={formik.handleChange}
+              value={formik.values.password}
+              onBlur={formik.handleBlur}
+              name="password"
+              placeholder="****************"
+              type="password"
+              required
+            />
+            {formik.touched.password && <span className="border-primary text-primary">{formik.errors.password}</span>}
+          </label>
+          {/* Input Password */}
+        </div>
         <div className="flex justify-between">
           <div className="flex gap-2">
             <input type="checkbox" />
