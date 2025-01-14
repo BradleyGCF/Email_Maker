@@ -18,4 +18,8 @@ export const AuthRoutes = [
       return { Component: module.SignUpPage }
     },
   },
+  {
+    path: Routes.plans,
+    lazy: () => import('@/screens/auth/plans'),
+  },
 ] as RouteObject[]

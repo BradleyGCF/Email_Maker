@@ -6,4 +6,5 @@ export const Routes = {
   user: {
     profile: '/profile',
   },
+  plans: '/plans',
 } as const
