@@ -5,7 +5,7 @@ import { GoImage } from 'react-icons/go'
 
 function Profile() {
   return (
-    <div className="bg-white p-2 flex flex-col gap-8 items-center rounded-xl">
+    <div className="bg-white p-4 flex flex-col gap-8 items-center rounded-xl">
       <h3 className="text-[21px] font-bold text-left w-full">Datos de usuario</h3>
       <div className="flex gap-8 w-full">
         <div className="grid gap-2">
@@ -31,7 +31,10 @@ function Profile() {
               <h6>Correo electrónico</h6>
               <Input type="text" value={'Nombre'} className="h-12" />
               <h6>Número de teléfono</h6>
-              <Input type="number" value={'***********'} className="h-12" />
+              <div className="flex gap-2">
+                <Input type="string" value={'+34'} className="h-12 w-12" />
+                <Input type="string" value={'555 555 55 55'} className="w-full h-12" />
+              </div>
             </div>
           </div>
           <div className="self-end">
