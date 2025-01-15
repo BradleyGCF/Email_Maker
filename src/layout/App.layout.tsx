@@ -1,8 +1,7 @@
+import Sidebar from '@/modules/core/components/sidebar'
 // import { $UserRole } from '@/modules/auth/enum'
-import { Footer } from '@/modules/core/components/footer'
-import { Header } from '@/modules/core/components/header'
 // import { ProtectedRoute } from '@/modules/core/context/ProtectedRoute.provider'
-import { Container } from '@/modules/core/ui/container'
+// import { Container } from '@/modules/core/ui/container'
 // import { Routes } from '@/routes'
 // import type { UserRole } from '@/types'
 import { Outlet } from 'react-router-dom'
@@ -10,11 +9,12 @@ import { Outlet } from 'react-router-dom'
 const Common = () => {
   return (
     <>
-      <Header />
-      <Container component="main" className="min-h-[80dvh] my-4 px-4 sm:px-6 lg:px-8">
-        <Outlet />
-      </Container>
-      <Footer />
+      <div className="flex m-3 gap-3">
+        <Sidebar />
+        <div>
+          <Outlet />
+        </div>
+      </div>
     </>
   )
 }

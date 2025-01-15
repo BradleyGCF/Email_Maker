@@ -8,13 +8,19 @@ interface ContentProps {
   advantages?: { id: number; text: string }[]
 }
 
-const planCard = ({ plan, advantages }: ContentProps) => {
+const planContent = ({ plan, advantages }: ContentProps) => {
   return (
     <>
-      <h3 className={cn('text-darkBlue font-black text-[32px]', plan.id === 2 && advantages && 'mt-1')}>Plan {plan.name}</h3>
-      <p>
-        <span className={cn('font-bold', advantages ? 'text-[32px]' : 'text-6')}>{plan.price}$</span>/mes
-      </p>
+      <div className={(!advantages && 'flex items-center justify-between') || ''}>
+        <h3
+          className={cn('text-darkBlue font-black text-[32px]', plan.id === 2 && advantages && 'mt-1', !advantages && 'text-2xl')}
+        >
+          Plan {plan.name}
+        </h3>
+        <p>
+          <span className={cn('font-bold text-[32px]')}>{plan.price}$</span>/mes
+        </p>
+      </div>
       <p className="text-gray text-[15px] font-Avenir">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
         aliqua. Ut enim ad minim veniam
@@ -38,4 +44,4 @@ const planCard = ({ plan, advantages }: ContentProps) => {
   )
 }
 
-export default planCard
+export default planContent

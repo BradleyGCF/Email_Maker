@@ -79,6 +79,9 @@ module.exports = {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
       },
+      height: {
+        'screen-minus-24': 'calc(100vh - 24px)',
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],
