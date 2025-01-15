@@ -27,7 +27,7 @@ export const AppRoutes = [
   },
   {
     path: Routes.templates,
-    lazy: () => import('@/screens/templates'),
+    lazy: () => import('@/screens/user/Templates'),
   },
   {
     path: Routes.emails,

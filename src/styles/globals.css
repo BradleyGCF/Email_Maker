@@ -69,10 +69,29 @@
 @layer base {
   * {
     @apply border-border;
+    padding: 0;
+      margin: 0;
+      scroll-behavior: smooth;
+      box-sizing: border-box;
+      font: inherit;
+      transition: background ease-out 400ms;
+  
+      /* hide default increment and decrement indicator */
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+  
+      input[type="number"] {
+        -moz-appearance: textfield;
+        appearance: auto;
+      }
   }
   body {
     @apply bg-background text-foreground;
   }
+
 }
 
 @layer components {
@@ -90,5 +109,37 @@
 
   .input__primary {
     @apply bg-white transition-all duration-200 placeholder:text-slate-500 focus:border-neutral-800 focus:shadow-lg;
+  }
+
+  .row-center {
+    @apply flex gap-5 justify-center items-center;
+  }
+
+  .col-center {
+    @apply flex gap-5 flex-col items-center justify-center;
+  }
+
+  .title {
+    @apply text-2xl font-bold text-[#1E1E1E];
+  }
+
+  .paragraph {
+    @apply text-[#373737] text-lg;
+  }
+
+  .description {
+    @apply text-[#828282] text-[13px];
+  }
+
+  .test {
+    @apply border border-red-700;
+  }
+
+  .test2 {
+    @apply border border-blue-700;
+  }
+
+  .btn {
+    @apply text-custom-green border-2 border-custom-green bg-transparent;
   }
 }
