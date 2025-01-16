@@ -1,4 +1,4 @@
-import type { SidebarItem } from '@/types/sidebar'
+import type { SidebarItem } from '@/types'
 import { Link } from 'react-router-dom'
 import { cn } from '../../utils'
 
