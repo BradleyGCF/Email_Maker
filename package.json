@@ -24,7 +24,7 @@
 		"@radix-ui/react-slot": "1.1.0",
 		"ag-charts-community": "^11.0.4",
 		"ag-charts-react": "^11.0.4",
-		"axios": "1.7.3",
+		"axios": "1.7.9",
 		"class-variance-authority": "0.7.0",
 		"clsx": "2.1.1",
 		"dotenv": "16.4.5",
