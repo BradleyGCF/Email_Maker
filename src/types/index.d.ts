@@ -1,5 +1,7 @@
 export * from './user'
 export * from './session'
+export * from './email'
+export * from './sidebar'
 import type { $OrderBy, $SessionStatus } from '@/modules/core/enum'
 
 export type Pagination = {

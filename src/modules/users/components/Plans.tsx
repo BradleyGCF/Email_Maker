@@ -4,7 +4,7 @@ import { plansNames } from '@/modules/core/utils/plans'
 
 const Plans = () => {
   return (
-    <div className="flex gap-6 max-w-[calc(100vw-175px)]">
+    <div className="flex gap-6 ">
       <div className="p-8 bg-white grid gap-8 rounded-2xl">
         <Title text="Plan activo" />
         <div className="border rounded-lg p-6 space-y-6">

@@ -1,4 +1,4 @@
-import type { SidebarItem } from '@/types/sidebar'
+import type { SidebarItem } from '@/types'
 // import { $UserRole } from '@/modules/auth/enum'
 // import { useUserStore } from '@/store'
 // import { Routes } from '@/routes'
