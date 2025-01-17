@@ -19,7 +19,7 @@ const Common = () => {
   )
 }
 
-export default function AppLayout(
+export default function HomeLayout(
   //   { role }
   // : { role: UserRole }
 ) {
