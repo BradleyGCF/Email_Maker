@@ -23,6 +23,7 @@ import { GoTable as Templates } from 'react-icons/go'
 import { IoChatbubbleOutline } from 'react-icons/io5'
 import Logo from '/logo_icon.svg'
 import IaChatIcon from '/sidebar/iaChat.svg'
+import IaChatSelectedIcon from '/sidebar/iaChatSelected.png'
 export const getLinks = () => {
   // const { user } = useUserStore()
 
@@ -65,8 +66,8 @@ export const getLinks = () => {
     },
     {
       iconDefault: <img src={IaChatIcon} alt="iaChat" className="bg-extraLightBlue" />,
-      iconFilled: <img src={IaChatIcon} alt="iaChat" className="bg-lightBlue" />,
-      title: 'Chat',
+      iconFilled: <img src={IaChatSelectedIcon} alt="iaChat" />,
+      title: 'IaChat',
       link: IaChat,
     },
   ]

@@ -1,3 +1,9 @@
+import ChatBubble from '@/modules/chatbot/components/chatBubble'
+
 export const Component = () => {
-  return <div>IaChat</div>
+  return (
+    <div>
+      <ChatBubble />
+    </div>
+  )
 }
