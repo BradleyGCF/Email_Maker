@@ -6,9 +6,10 @@ import { cn } from '../utils'
 interface ContentProps {
   plan: { id: number; name: string; price: string }
   advantages?: { id: number; text: string }[]
+  handler?: () => void
 }
 
-const planContent = ({ plan, advantages }: ContentProps) => {
+const planContent = ({ plan, advantages, handler }: ContentProps) => {
   return (
     <>
       <div className={(!advantages && 'flex items-center justify-between') || ''}>
@@ -39,7 +40,7 @@ const planContent = ({ plan, advantages }: ContentProps) => {
           {a.text}
         </div>
       ))}
-      <Button text={advantages ? 'Comprar ahora' : 'Cambiar plan'} className="w-full" />
+      <Button text={advantages ? 'Comprar ahora' : 'Cambiar plan'} className="w-full" onClick={handler || undefined} />
     </>
   )
 }
