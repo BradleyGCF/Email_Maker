@@ -16,6 +16,7 @@ module.exports = {
         landing: '0px 4px 18.7px 8px rgba(183, 221, 255, 0.25)',
         landingIntense: '0px 4px 18.5px 8px rgba(183, 221, 255, 0.86)',
         auth: '0px 4px 25.7px 0px rgba(147, 147, 147, 0.25)',
+        chatbot: '0px 4px 18.7px 8px rgba(183, 221, 255, 0.25)',
       },
       colors: {
         border: 'hsl(var(--border))',
