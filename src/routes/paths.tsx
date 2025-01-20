@@ -7,6 +7,7 @@ export const Routes = {
     profile: '/profile',
   },
   plans: '/plans',
+  newProject: '/newProject',
   editor: '/editor',
   templates: '/templates',
   emails: '/emails',

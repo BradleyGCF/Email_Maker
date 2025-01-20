@@ -30,11 +30,15 @@ export const AppRoutes = [
     lazy: () => import('@/screens/templates'),
   },
   {
+    path: Routes.newProject,
+    lazy: () => import('@/screens/emails'),
+  },
+  {
     path: Routes.emails,
     lazy: () => import('@/screens/emails'),
   },
   {
     path: Routes.IaChat,
-    lazy: () => import('@/screens/IaChat'),
+    lazy: () => import('@/screens/editor'),
   },
 ] as RouteObject[]
