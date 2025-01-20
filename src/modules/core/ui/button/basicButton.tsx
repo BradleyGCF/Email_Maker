@@ -6,11 +6,13 @@ const BasicButton = ({
   className,
   outline,
   type,
-}: { text: string; className?: string; outline?: boolean; type?: 'submit' | 'reset' }) => (
+  onClick,
+}: { text: string; className?: string; outline?: boolean; type?: 'submit' | 'reset'; onClick?: (() => void) | undefined }) => (
   <Button
     className={cn('bg-lightBlue p-2.5 h-12 rounded-xl', outline && 'bg-white border border-lightBlue text-lightBlue', className)}
     loading={false}
     type={type || 'button'}
+    onClick={onClick}
   >
     {text}
   </Button>

@@ -1,45 +1,53 @@
-import { useEffect, useRef, useState } from 'react'
+import {
+  useEffect,
+  // useRef,
+  useState,
+} from 'react'
 
 export const UseBubbleChat = () => {
-  const ref = useRef<HTMLDivElement>(null)
+  // const ref = useRef<HTMLDivElement>(null)
 
   const [bubbleBox, setBubbleBox] = useState(false)
 
-  const handleOpenBox = () => {
-    setBubbleBox(!bubbleBox)
-  }
+  // const handleOpenBox = () => {
+  //   setBubbleBox(!bubbleBox)
+  // }
 
-  // biome-ignore lint:
+  // useEffect(() => {
+  //   const handleClickOutside = (event: MouseEvent) => {
+  //     if (ref.current && !ref.current.contains(event.target as Node)) {
+  //       setBubbleBox(false)
+  //     }
+  //   }
+  //   document.addEventListener('mousedown', handleClickOutside)
+  //   return () => {
+  //     document.removeEventListener('mousedown', handleClickOutside)
+  //   }
+  // }, [bubbleBox])
+
+  // useEffect(() => {
+  //   const handleEscapeKey = (event: KeyboardEvent) => {
+  //     if (event.key === 'Escape') {
+  //       setBubbleBox(false)
+  //     }
+  //   }
+
+  //   document.addEventListener('keydown', handleEscapeKey)
+  //   return () => {
+  //     document.removeEventListener('keydown', handleEscapeKey)
+  //   }
+  // }, [bubbleBox])
+
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (ref.current && !ref.current.contains(event.target as Node)) {
-        setBubbleBox(false)
-      }
-    }
-    document.addEventListener('mousedown', handleClickOutside)
+    setBubbleBox(true)
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
+      setBubbleBox(false)
     }
-  }, [bubbleBox])
-
-  // biome-ignore lint:
-  useEffect(() => {
-    const handleEscapeKey = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        setBubbleBox(false)
-      }
-    }
-
-    document.addEventListener('keydown', handleEscapeKey)
-    return () => {
-      document.removeEventListener('keydown', handleEscapeKey)
-    }
-  }, [bubbleBox])
-
+  }, [])
   return {
-    ref,
+    // ref,
     bubbleBox,
     setBubbleBox,
-    handleOpenBox,
+    // handleOpenBox,
   }
 }

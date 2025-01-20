@@ -1,15 +1,12 @@
-import ChatBubble from '@/modules/chatbot/components/chatBubble'
 import Sidebar from '@/modules/core/components/sidebar'
 // import { $UserRole } from '@/modules/auth/enum'
 // import { ProtectedRoute } from '@/modules/core/context/ProtectedRoute.provider'
 // import { Container } from '@/modules/core/ui/container'
 // import { Routes } from '@/routes'
 // import type { UserRole } from '@/types'
-import { Outlet, useLocation } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 
 const Common = () => {
-  const { pathname } = useLocation()
-
   return (
     <>
       <div className="flex m-3 gap-3">
@@ -18,7 +15,6 @@ const Common = () => {
           <Outlet />
         </div>
       </div>
-      {pathname !== '/chat' && <ChatBubble />}
     </>
   )
 }

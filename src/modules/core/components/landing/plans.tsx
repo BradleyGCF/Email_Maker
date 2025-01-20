@@ -1,5 +1,7 @@
+import { Routes } from '@/routes'
 import { useRefStore } from '@/store/refStore'
 import { useEffect, useRef, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { cn } from '../../utils'
 import { plansNames } from '../../utils/plans'
 import { advantages } from '../../utils/plans'
@@ -14,6 +16,11 @@ const PlansSection = () => {
     if (ref.current !== null) setRef(ref)
   }, [setRef])
 
+  const navigate = useNavigate()
+  const handleNavigate = () => {
+    navigate(Routes.newProject)
+  }
+
   return (
     <section ref={ref}>
       <div className="flex gap-12 font-inter mx-28">
@@ -27,7 +34,7 @@ const PlansSection = () => {
             onClick={() => setSelected(index)}
             onKeyDown={() => setSelected(index)}
           >
-            <PlanContent plan={p} advantages={advantages} />
+            <PlanContent plan={p} advantages={advantages} handler={handleNavigate} />
           </div>
         ))}
       </div>

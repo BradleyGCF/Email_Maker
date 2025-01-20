@@ -50,7 +50,7 @@ const EmailEditorComponent = () => {
         type="button"
         onClick={handleExportHtml}
       >
-        Exportar HTML
+        {/* Exportar HTML */}
       </button>
     </Container>
   )
