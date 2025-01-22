@@ -41,4 +41,8 @@ export const AppRoutes = [
     path: Routes.IaChat,
     lazy: () => import('@/screens/editor'),
   },
+  {
+    path: Routes.IaRecommendation,
+    lazy: () => import('@/screens/editor'),
+  },
 ] as RouteObject[]

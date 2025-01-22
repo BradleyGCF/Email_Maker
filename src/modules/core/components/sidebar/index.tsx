@@ -44,7 +44,7 @@ const Sidebar = () => {
       ref={ref}
       className={cn(
         'lg:sticky lg:top-3',
-        'fixed z-50 left:0 -translate-x-100 flex transition-transform',
+        'fixed left:0 -translate-x-100 flex transition-transform',
         'w-[91px] h-[calc(100vh-24px)]',
         'flex-col justify-between items-center py-6 px-4',
         'rounded-md border'

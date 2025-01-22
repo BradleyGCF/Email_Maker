@@ -20,16 +20,16 @@ const table = () => {
               key={i.i}
               className={cn('flex gap-4 py-6 px-[56px] bg-white w-full justify-between border-b', i.i === 7 && 'rounded-b-lg')}
             >
-              <td>
+              <td className="h-6">
                 <p>Total E-mails enviados</p>
               </td>
-              <td>
+              <td className="h-6">
                 <p>09/12/2025</p>
               </td>
-              <td>
+              <td className="h-6">
                 <p>2300</p>
               </td>
-              <td className="flex gap-2 w-48 text-left">
+              <td className="flex gap-2 w-48 text-left h-6">
                 <Pencil1Icon className="h-6 w-6" />
                 <TrashIcon className="h-6 w-6" />
               </td>
