@@ -61,7 +61,7 @@ const templates = [
 
 const index = () => {
   return (
-    <div className="flex flex-wrap gap-x-4 gap-y-8">
+    <div className="w-full flex flex-wrap gap-x-4 gap-y-8 justify-center">
       {templates.map((t) => (
         <div
           key={t.id}
