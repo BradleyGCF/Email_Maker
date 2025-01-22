@@ -12,4 +12,5 @@ export const Routes = {
   templates: '/templates',
   emails: '/emails',
   IaChat: '/IaChat',
+  IaRecommendation: '/IaRecommendation',
 } as const
