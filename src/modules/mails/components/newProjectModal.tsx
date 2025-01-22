@@ -1,5 +1,20 @@
 import Title from '@/modules/core/ui/title'
+import { useRefStore } from '@/store/refStore'
+import { useEffect, useRef } from 'react'
 const newProjectModal = () => {
+  // const [selected, setSelected] = useState(1)
+  const ref = useRef<HTMLElement | null>(null)
+  const { setRef } = useRefStore()
+
+  useEffect(() => {
+    if (ref.current !== null) setRef(ref)
+  }, [setRef])
+
+  // const navigate = useNavigate()
+  // const handleNavigate = () => {
+  //   navigate(Routes.templates)
+  // }
+
   return (
     <div className="w-screen h-screen absolute backdrop-blur-sm overflow-hidden top-0">
       <div className="bg-white rounded-3xl absolute left-[381px] top-20 p-[92px] max-w-[525px]">
