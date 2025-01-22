@@ -1,0 +1,12 @@
+2025/01/22 Screens - Germán Horianski
+    Cambios:
+        - Arreglado el blur de la sidebar en las vistas de modal.
+        - Arreglado el background de los items seleccionados en las vistas de modal.
+        - Creado el modal genérico con createPortal.
+        - Conectado el botón de cargar imagen de perfil en vista perfil.
+        - Creado el modal de IaRecommendation.
+        - Creada la lógica de selección de tipo de proyecto nuevo.
+        - Navegación desde la vist de planes.
+        - Creado el store global para gestionar los modales.
+    Observaciones:
+        - Faltan las tres vistas del editor de emails que están relacionadas entre sí. A la espera de Franklin para que resuelva si creamos un editor propio, o adaptamos el diseño de Figma a una solución de terceros ya existente.
